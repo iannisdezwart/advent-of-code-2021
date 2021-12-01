@@ -1,0 +1,1 @@
+c;main(n,o){for(o=9<<9;~scanf("%u",&n);c+=n>o,o=n);printf("%u",c);}

@@ -1,0 +1,1 @@
+*p,n,c,a[20000];main(i){for(p=a;~scanf("%u",p++);n++);for(i=3;c+=a[i]>a[i-3],i++<n;);printf("%u",c);}

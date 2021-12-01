@@ -5,9 +5,6 @@ scan_str:
 print_str:
 	.string "%lu\n"
 
-inc_str:
-	.string "++"
-
 .text
 .global _main
 _main:
