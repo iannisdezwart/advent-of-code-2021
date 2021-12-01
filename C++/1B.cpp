@@ -12,18 +12,13 @@ main()
 	}
 
 	int c = 0;
-	int old = INT_MAX;
 
-	for (size_t i = 2; i < v.size(); i++)
+	for (size_t i = 3; i < v.size(); i++)
 	{
-		int s = v[i - 2] + v[i - 1] + v[i];
-
-		if (s > old)
+		if (v[i] > v[i - 3])
 		{
 			c++;
 		}
-
-		old = s;
 	}
 
 	std::cout << c << std::endl;

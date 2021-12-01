@@ -11,7 +11,7 @@ _main:
 	subq $8, %rsp
 
 	movl $-1, %r15d                # old = MAX
-	movl $0, %r14d                 # count = 0
+	xorl %r14d, %r14d              # count = 0
 
 .L_scan_loop:
 	# scanf("%u", &n)
