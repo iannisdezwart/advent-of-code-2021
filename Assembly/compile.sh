@@ -1,4 +1,4 @@
-CC=cc
+: ${CC=cc}
 
 if [ -z "$1" ]; then
 	echo "Usage: $0 <advent of code date (1-25)>"
