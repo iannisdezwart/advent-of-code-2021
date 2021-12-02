@@ -1,0 +1,1 @@
+D,H;char s[9];main(n){for(;~scanf("%s%u",s,&n);*s&2?H+=n:(D+=*s&3?-n:n));printf("%d",D*H);}
