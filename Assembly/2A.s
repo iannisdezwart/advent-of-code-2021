@@ -31,29 +31,29 @@ _main:
 	movl (%rbp), %ecx              # load n
 	movb 8(%rbp), %dl              # load s[0]
 
-	cmpb $'f', %dl                # if s[0] == 'f', go forward
+	cmpb $'f', %dl                 # if s[0] == 'f', go forward
 	je .L_loop_fwd
-	cmpb $'u', %dl                # if s[0] == 'u', go up
+	cmpb $'u', %dl                 # if s[0] == 'u', go up
 	je .L_loop_up
-	                              # otherwise, go down
+	                               # otherwise, go down
 
-	addl %ecx, %r15d 	      # dep += n
+	addl %ecx, %r15d 	       # dep += n
 	jmp .L_loop
 
 .L_loop_fwd:
-	addl %ecx, %r14d              # hor += n
+	addl %ecx, %r14d               # hor += n
 	jmp .L_loop
 
 .L_loop_up:
-	subl %ecx, %r15d              # dep -= n
+	subl %ecx, %r15d               # dep -= n
 	jmp .L_loop
 
 .L_loop_done:
 	# printf("%d\n", hor * dep)
 
-	leaq print_str(%rip), %rdi     # arg1 = "%d\n"
-	movl %r14d, %esi               # arg2 = hor
-	imull %r15d, %esi              # arg2 *= dep
+	leaq print_str(%rip), %rdi      # arg1 = "%d\n"
+	movl %r14d, %esi                # arg2 = hor
+	imull %r15d, %esi               # arg2 *= dep
 	xorl %eax, %eax
 	call _printf
 
