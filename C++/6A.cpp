@@ -32,7 +32,8 @@ struct Population
 	}
 
 	size_t
-	size(){
+	size()
+	{
 		size_t s = 0;
 
 		for (int i = 0; i < 9; i++)
