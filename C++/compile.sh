@@ -6,6 +6,6 @@ if [ -z "$1" ]; then
 fi
 
 echo compiling $1A
-$CXX -o $1A $1A.cpp
+$CXX -o $1A $1A.cpp -Ofast
 echo compiling $1B
-$CXX -o $1B $1B.cpp
+$CXX -o $1B $1B.cpp -Ofast
