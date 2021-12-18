@@ -1,18 +1,5 @@
 #include <bits/stdc++.h>
 
-std::string
-repeat(const std::string &str, size_t count)
-{
-	std::string out;
-
-	for (size_t i = 0; i < count; ++i)
-	{
-		out += str;
-	}
-
-	return out;
-}
-
 struct Node
 {
 	int val;
